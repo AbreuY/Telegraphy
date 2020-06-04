@@ -204,10 +204,6 @@
 
 package me.sheasmith.nzradio;
 
-/**
- * Created by TheDiamondPicks on 16/02/2019.
- */
-
 import android.app.Activity;
 import android.content.Context;
 
@@ -218,9 +214,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-/**
- * Writes/reads an object to/from a private local file
- */
 public class LocalPersistence {
 
 
