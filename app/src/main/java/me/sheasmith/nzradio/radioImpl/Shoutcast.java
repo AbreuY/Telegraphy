@@ -204,6 +204,7 @@
 
 package me.sheasmith.nzradio.radioImpl;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -265,9 +266,14 @@ public class Shoutcast implements Radio {
 
                 Response itunes = client.newCall(itunesRequest).execute();
                 JSONObject json = new JSONObject(itunes.body().string());
-                JSONObject result = json.getJSONArray("results").getJSONObject(0);
+                JSONArray results = json.getJSONArray("results");
 
-                String albumArt = result.getString("artworkUrl100").replace("100x100", "500x500");
+                String albumArt = logo;
+                if (results.length() > 0) {
+                    JSONObject result = results.getJSONObject(0);
+                    albumArt = result.getString("artworkUrl100").replace("100x100", "500x500");
+                }
+
 
                 String show = name;
                 String time = "";

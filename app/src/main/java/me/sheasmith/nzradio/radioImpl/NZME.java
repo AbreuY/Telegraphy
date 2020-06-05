@@ -286,7 +286,9 @@ public class NZME implements Radio {
 
                 if (!show.equals("null")) {
                     time = showInfo.getString("StartTime").replace(".", "") + " - " + showInfo.getString("EndTime").replace(".", "");
-                    albumArt = showInfo.getString("Image");
+                    String art = showInfo.getString("Image");
+                    if (!art.isEmpty())
+                        albumArt = art;
                     songTitle = show;
                     artist = name;
                 } else

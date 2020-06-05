@@ -203,7 +203,7 @@
   -->
 
 <resources>
-    <string name="app_name">NZ Radio</string>
+    <string name="app_name">Telegraphy</string>
     <string name="title_activity_maps">Map</string>
-    <string name="playback_channel_name">NZ Radio</string>
+    <string name="playback_channel_name">Telegraphy</string>
 </resources>

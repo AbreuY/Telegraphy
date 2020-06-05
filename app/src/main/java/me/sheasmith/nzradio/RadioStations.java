@@ -318,7 +318,7 @@ public class RadioStations {
 
     public static List<Radio> getDecentStations(Region region) {
         List<Radio> radios = new ArrayList<Radio>() {{
-            add(new StreamOn("http://reelworld.streamon.fm/hls/ReelWorld.m3u8", "https://i1.sndcdn.com/avatars-000240270529-fby72c-t500x500.jpg", "Reelworld", "http://reelworld.streamon.fm/metadata/recentevents/ReelWorld-24k.json"));
+//            add(new StreamOn("http://reelworld.streamon.fm/hls/ReelWorld.m3u8", "https://i1.sndcdn.com/avatars-000240270529-fby72c-t500x500.jpg", "Reelworld", "http://reelworld.streamon.fm/metadata/recentevents/ReelWorld-24k.json"));
         }};
 
         if (region.brian_fm_type.equals("STREAMON"))
@@ -332,7 +332,7 @@ public class RadioStations {
     public static List<Radio> getOtherStations(Region region) {
         List<Radio> radios = new ArrayList<Radio>() {{
             add(new Shoutcast("http://thecheese.ddns.net:8010/;", "https://i.imgur.com/Mz4R7pN.png", "The Cheese", "http://thecheese.ddns.net:8010/currentsong?sid=1"));
-            add(new Shoutcast("http://stream.boosh.fm:8000/boosh256mp3", "https://boosh.fm/static/images/boosh_icon_245x300.png", "Boosh.FM", "https://boosh.fm/static/current"));
+            add(new Shoutcast("http://stream.boosh.fm:8000/boosh256mp3", "https://boosh.fm/wp-content/uploads/2020/03/boosh_v4_icon_1200x1200_transparent-150x150.png", "Boosh.FM", "https://boosh.fm/wp-content/uploads/current"));
             add(new Shoutcast("http://live.outcastdigital.com:8000/groove", "https://cdn-radiotime-logos.tunein.com/s8341q.png", "Groove FM", "NONE"));
 //            add(new Icycast("https://listen.outcastdigital.com/ractive", "http://i.mjh.nz/nz/images/radio.or.12.png", "Radio Active", "http://www.radioactive.fm/remote/appdata/play/nowplaying.xml"));
             add(new Icycast("https://listen.outcastdigital.com/radiocontrol", "http://i.mjh.nz/nz/images/radio.or.13.png", "Radio Control", "https://www.outcastdigital.com/playlist/radiocontrol.xml"));
@@ -345,9 +345,9 @@ public class RadioStations {
         if (region.name.equals("Northland")) {
             radios.add(new Icycast("http://203.118.136.79:88/broadwave.mp3", "https://i.imgur.com/wGXrTlh.png", "TLC Radio", "NONE"));
         } else if (region.name.equals("Rotorua")) {
-            radios.add(new Icycast("http://stream.nrgkits.co.nz:5000/tlcr_ngongotaha.m3u", "https://i.imgur.com/wGXrTlh.png", "TLC Radio", "NONE"));
+            radios.add(new Icycast("http://stream.nrgkits.co.nz:5000/tlcr_ngongotaha", "https://i.imgur.com/wGXrTlh.png", "TLC Radio", "NONE"));
         } else {
-            radios.add(new Icycast("http://stream.nrgkits.co.nz:5000/tlcrwestauckland.m3u", "https://i.imgur.com/wGXrTlh.png", "TLC Radio", "NONE"));
+            radios.add(new Icycast("http://stream.nrgkits.co.nz:5000/tlcrwestauckland", "https://i.imgur.com/wGXrTlh.png", "TLC Radio", "NONE"));
         }
 
         return radios;
